@@ -6,7 +6,7 @@ const ProductSelector = ({ onSelectProduct, onSelectPincode ,onSelectProductType
   const [selectedProduct, setSelectedProduct] = useState(null);
 
   useEffect(() => {
-    axios.get("http://127.0.0.1:5000/live_product_history") // ✅ Ensure Flask is running here
+    axios.get("https://backend-d88w.onrender.com/live_product_history") // ✅ Ensure Flask is running here
       .then(response => setProducts(response.data))
       .catch(error => console.error("Error fetching products:", error));
   }, []);
