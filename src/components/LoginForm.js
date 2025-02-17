@@ -18,7 +18,7 @@ const LoginForm = ({ onLoginSuccess }) => {
     e.preventDefault();
 
     try {
-      const response = await axios.post("http://34.59.86.54:8000/login", {
+      const response = await axios.post("https://34.59.86.54:8000/login", {
         username,
         password,
       });

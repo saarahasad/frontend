@@ -30,7 +30,7 @@ const ProductPopularityChart = ({ productId, productType ,productCategory}) => {
 
   useEffect(() => {
     // Construct the full API URL
-    const apiUrl = `http://34.59.86.54:8000/product-popularity-data/${productId}/${productType}`;
+    const apiUrl = `https://34.59.86.54:8000/product-popularity-data/${productId}/${productType}`;
 
     // Fetch the data from the API based on the productId and productType
     fetch(apiUrl)
