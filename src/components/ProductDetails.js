@@ -15,7 +15,7 @@ const ProductDetails = ({ productId, pincode, productType }) => {
   useEffect(() => {
     if (productId) {
       setLoading(true);
-      let url = `https://34.59.86.54:8000/latest_scraped_entries/${productId}`;
+      let url = `https://34.59.86.54/latest_scraped_entries/${productId}`;
       const params = [];
       if (pincode) {
         params.push(`pincode=${pincode}`);

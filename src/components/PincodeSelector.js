@@ -5,7 +5,7 @@ const PincodeSelector = ({ onSelectPincode }) => {
   const [pincodes, setPincodes] = useState([]);
 
   useEffect(() => {
-    axios.get("https://34.59.86.54:8000/pincodes") 
+    axios.get("https://34.59.86.54/pincodes") 
       .then(response => setPincodes(response.data))
       .catch(error => console.error("Error fetching pincodes:", error));
   }, []);
