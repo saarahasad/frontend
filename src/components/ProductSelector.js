@@ -35,7 +35,7 @@ const ProductSelector = ({ onSelectProduct, onSelectPincode ,onSelectProductType
                 className={`sidebar-item ${selectedProduct === product.product_id ? "active" : ""}`}
                 onClick={() => handleProductSelect(product.product_id, product.pincode)}
               >
-                {product.name}
+                {product.name}  <span style={{ color:"maroon",fontWeight:"450", fontSize:"12px", borderRadius:"5px",padding:"5px",backgroundColor:"#ddd"}}>PIN: {product.pincode}</span>
               </li>
             ))
           )}
