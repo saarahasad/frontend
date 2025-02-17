@@ -5,7 +5,7 @@ const PincodeSelector = ({ onSelectPincode }) => {
   const [pincodes, setPincodes] = useState([]);
 
   useEffect(() => {
-    axios.get("http://127.0.0.1:5000/pincodes") 
+    axios.get("https://backend-1-razn.onrender.com/pincodes") 
       .then(response => setPincodes(response.data))
       .catch(error => console.error("Error fetching pincodes:", error));
   }, []);

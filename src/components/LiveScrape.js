@@ -43,7 +43,7 @@ const LiveScrape = ({
     try {
       const synonymsArray = synonyms.split(",").map((item) => item.trim());
       const synonyms_dict = { synonyms: synonymsArray };
-      const response = await axios.post("http://127.0.0.1:5000/scrape", {
+      const response = await axios.post("https://backend-1-razn.onrender.com/scrape", {
         pincode,
         product: productName,
         synonyms: synonyms_dict,

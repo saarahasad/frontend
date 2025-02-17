@@ -27,6 +27,47 @@
   overflow-y: auto; /* Allows scrolling if content overflows */
 }
 
+/* Mobile view adjustments */
+@media (max-width: 768px) {
+  /* Change flex-direction to column for mobile screens */
+  .app-container {
+    flex-direction: column;
+  }
+
+  /* Sidebar adjustments */
+  .sidebar-container {
+    width: 100%; /* Full width */
+    height: auto; /* Adjust the height */
+    position: relative; /* Sidebar scrollable but no fixed position */
+    margin-bottom: 10px; /* Space between sidebar and content */
+  }
+
+  /* Content container adjustments */
+  .content-container {
+    margin-left: 0; /* Remove offset */
+    margin-top: 10px; /* Space at the top */
+    padding: 10px;
+  }
+
+  .topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+
+  /* Adjustments for the login form for better readability */
+  .login-form-container {
+    width: 100%;
+    padding: 20px;
+  }
+
+  /* Reduce sidebar width */
+  .sidebar-container {
+    width: 100%; /* Full width */
+  }
+}
+
 /* Pincode Selector Styling */
 .pincode-selector {
   padding: 10px;
@@ -126,8 +167,7 @@
 }
 
 /* Table Styling */
-table {
-  width: 100%;
+.scraped-product-table {
   border-collapse: collapse;
   margin-bottom: 20px;
   font-family: "Arial", sans-serif;
@@ -147,11 +187,11 @@ th {
 }
 
 /* Row Styling */
-.scraped-product-table  tr:nth-child(even) {
+.scraped-product-table tr:nth-child(even) {
   background-color: white; /* Soft Green */
 }
 
-.scraped-product-table  tr:nth-child(odd) {
+.scraped-product-table tr:nth-child(odd) {
   background-color: #f1ebeb; /* Soft Yellow */
 }
 
@@ -183,10 +223,8 @@ th {
   vertical-align: top;
   padding-bottom: 20px;
   font-weight: 300;
-  line-height:150%;
+  line-height: 150%;
 }
-
-
 
 /* Charts Container */
 .charts-container {
@@ -194,9 +232,11 @@ th {
   flex-direction: column;
   align-items: center;
   padding: 20px;
+  margin: 10px;
   border-radius: 10px;
   height: 100%;
 }
+
 
 /* Nested Chart Tabs */
 .chart-tabs {
@@ -397,7 +437,7 @@ th {
   align-items: center;
 }
 
-.header-cell {
+.header-cel l {
   font-weight: bold;
   color: #16404d; /* Darker text for readability */
   width: 150px; /* Adjust width for consistency */
@@ -490,8 +530,6 @@ button:disabled:hover {
   background-color: #ccc; /* Keep background the same during hover */
   cursor: not-allowed; /* Prevent any hover effect */
 }
-
-
 
 /* Global Styles for the LoginForm */
 .login-container {
@@ -625,4 +663,60 @@ select:focus {
 
 .logout-btn:hover {
   background-color: #16404d;
+}
+
+
+@media (max-width: 768px) {
+
+  .charts-container {
+    margin: 0px;
+  }
+  .chart-description {
+    padding: 10px;
+  }
+
+}
+
+
+
+/* Mobile Friendly Adjustments */
+@media (max-width: 768px) {
+  /* Table Container with Horizontal Scroll */
+  .table-container {
+    width:100%;
+    overflow-x: auto; /* Allow horizontal scrolling */
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on mobile */
+  }
+
+
+  /* Ensure table has fixed width but can scroll horizontally */
+  .scraped-product-table, .package-size-table {
+    width:100%;
+  }
+
+  /* Adjust padding for smaller devices */
+  .scraped-product-table td, .scraped-product-table th {
+    padding: 10px 8px; /* Reduced padding for mobile screens */
+  }
+
+  /* Optional: Adjust header font size for mobile */
+  .scraped-product-table th {
+    font-size: 14px; /* Smaller header font for better mobile readability */
+  }
+
+  /* Optional: Adjust text size for each column */
+  .scraped-product-table td {
+    font-size: 15px; /* Adjust text size for better mobile readability */
+  }
+
+  /* Keep hover effect for mobile */
+  .scraped-product-table tr:hover {
+    background-color: #16404d; /* Soft dark blue on hover */
+  }
+
+  .scraped-product-table tr:hover td,
+  .scraped-product-table tr:hover th {
+    color: white !important;
+    font-weight: bold;
+  }
 }
