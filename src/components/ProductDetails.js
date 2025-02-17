@@ -15,7 +15,7 @@ const ProductDetails = ({ productId, pincode, productType }) => {
   useEffect(() => {
     if (productId) {
       setLoading(true);
-      let url = `https://backend-1-razn.onrender.com/latest_scraped_entries/${productId}`;
+      let url = `http://34.59.86.54:8000/pincodes/latest_scraped_entries/${productId}`;
       const params = [];
       if (pincode) {
         params.push(`pincode=${pincode}`);

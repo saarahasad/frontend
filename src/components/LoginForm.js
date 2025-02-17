@@ -18,7 +18,7 @@ const LoginForm = ({ onLoginSuccess }) => {
     e.preventDefault();
 
     try {
-      const response = await axios.post("https://backend-1-razn.onrender.com/login", {
+      const response = await axios.post("http://34.59.86.54:8000/pincodes/login", {
         username,
         password,
       });
