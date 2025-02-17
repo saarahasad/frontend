@@ -31,7 +31,6 @@ const ProductPopularityChart = ({ productId, productType ,productCategory}) => {
   useEffect(() => {
     // Construct the full API URL
     const apiUrl = `https://backend-1-razn.onrender.com/product-popularity-data/${productId}/${productType}`;
-
     // Fetch the data from the API based on the productId and productType
     fetch(apiUrl)
       .then((response) => {
