@@ -18,7 +18,7 @@ const LoginForm = ({ onLoginSuccess }) => {
     e.preventDefault();
 
     try {
-      const response = await axios.post("https://34.59.86.54/login", {
+      const response = await axios.post("https://backend.snapprice.in/login", {
         username,
         password,
       });

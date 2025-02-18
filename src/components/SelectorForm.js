@@ -13,12 +13,12 @@ const SelectorForm = ({
 
   useEffect(() => {
     axios
-      .get("https://34.59.86.54/pincodes")
+      .get("https://backend.snapprice.in/pincodes")
       .then((response) => setPincodes(response.data))
       .catch((error) => console.error("Error fetching pincodes:", error));
 
     axios
-      .get("https://34.59.86.54/products") // ✅ Ensure Flask is running here
+      .get("https://backend.snapprice.in/products") // ✅ Ensure Flask is running here
       .then((response) => setProducts(response.data))
       .catch((error) => console.error("Error fetching products:", error));
   }, []);

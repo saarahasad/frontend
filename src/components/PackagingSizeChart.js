@@ -219,6 +219,7 @@ const PackagingSizeChart = ({ productData }) => {
       {/* Table displaying Packaging Sizes and Brands */}
       <div className="table-container">
         <h3>Packaging Size and Brands</h3>
+        <div class="package-size-table-wrapper">
         <table className="package-size-table">
           <thead>
             <tr style={{ border: "2px solid #ddd" }}>
@@ -247,6 +248,7 @@ const PackagingSizeChart = ({ productData }) => {
             </tr>
           </tbody>
         </table>
+        </div>
       </div>
       <br /> <br />
     </div>

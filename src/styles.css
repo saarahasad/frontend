@@ -27,46 +27,6 @@
   overflow-y: auto; /* Allows scrolling if content overflows */
 }
 
-/* Mobile view adjustments */
-@media (max-width: 768px) {
-  /* Change flex-direction to column for mobile screens */
-  .app-container {
-    flex-direction: column;
-  }
-
-  /* Sidebar adjustments */
-  .sidebar-container {
-    width: 100%; /* Full width */
-    height: auto; /* Adjust the height */
-    position: relative; /* Sidebar scrollable but no fixed position */
-    margin-bottom: 10px; /* Space between sidebar and content */
-  }
-
-  /* Content container adjustments */
-  .content-container {
-    margin-left: 0; /* Remove offset */
-    margin-top: 10px; /* Space at the top */
-    padding: 10px;
-  }
-
-  .topbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 10px;
-  }
-
-  /* Adjustments for the login form for better readability */
-  .login-form-container {
-    width: 100%;
-    padding: 20px;
-  }
-
-  /* Reduce sidebar width */
-  .sidebar-container {
-    width: 100%; /* Full width */
-  }
-}
 
 /* Pincode Selector Styling */
 .pincode-selector {
@@ -237,7 +197,6 @@ th {
   height: 100%;
 }
 
-
 /* Nested Chart Tabs */
 .chart-tabs {
   display: flex;
@@ -316,50 +275,6 @@ th {
   font-size: 14px;
 }
 
-/* Responsive Design */
-@media screen and (max-width: 768px) {
-  .app-container {
-    flex-direction: column;
-    height: auto;
-  }
-
-  .sidebar-container {
-    width: 100%;
-    height: auto;
-  }
-
-  .details-container {
-    width: 100%;
-    padding: 10px;
-  }
-
-  .tabs {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .tabs button {
-    width: auto;
-    padding: 8px;
-    font-size: 14px;
-  }
-
-  .chart-tabs {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .chart-tabs button {
-    padding: 6px 12px;
-    font-size: 12px;
-  }
-
-  .chart {
-    width: 100%;
-  }
-}
 
 .product-header {
   justify-content: space-between;
@@ -666,57 +581,166 @@ select:focus {
 }
 
 
-@media (max-width: 768px) {
 
-  .charts-container {
-    margin: 0px;
+/* Mobile view adjustments */
+@media (max-width: 768px) {
+  /* Change flex-direction to column for mobile screens */
+  .app-container {
+    flex-direction: column;
   }
-  .chart-description {
+
+  /* Sidebar adjustments */
+  .sidebar-container {
+    width: 100%; /* Full width */
+    height: auto; /* Adjust the height */
+    position: relative; /* Sidebar scrollable but no fixed position */
+    margin-bottom: 10px; /* Space between sidebar and content */
+  }
+
+  /* Content container adjustments */
+  .content-container {
+    margin-left: 0; /* Remove offset */
+    margin-top: 10px; /* Space at the top */
     padding: 10px;
   }
 
+  .topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+
+  /* Adjustments for the login form for better readability */
+  .login-form-container {
+    width: 100%;
+    padding: 20px;
+  }
+
+  /* Reduce sidebar width */
+  .sidebar-container {
+    width: 100%; /* Full width */
+  }
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .app-container {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .sidebar-container {
+    width: 100%;
+    height: auto;
+  }
+
+  .details-container {
+    width: 100%;
+    max-width: 100vw;
+    padding: 10px;
+    box-sizing: border-box;
+    overflow-x: hidden;
+  }
+
+  /* Scrollable wrapper for the table */
+  .scraped-product-table-wrapper {
+    width: 100%;
+    overflow-x: auto; /* Enables horizontal scrolling */
+    display: block;
+  }
+
+  /* Ensure the table stays aligned and fits inside the wrapper */
+  .scraped-product-table {
+    width: 100%;
+    min-width: 800px; /* Ensures horizontal scrolling */
+    border-collapse: collapse;
+  }
+
+  /* Fix column width to match header and body */
+  .scraped-product-table thead,
+  .scraped-product-table tbody,
+  .scraped-product-table tr {
+    display: table;
+    width: 100%;
+    table-layout: fixed; /* Ensures consistent column widths */
+  }
+
+  /* Allow text to wrap instead of overlapping */
+  .scraped-product-table th,
+  .scraped-product-table td {
+    padding: 8px;
+    text-align: center;
+    border: 1px solid #ddd;
+    vertical-align: middle;
+    white-space: normal; /* Allows text wrapping */
+    word-wrap: break-word; /* Ensures long words break correctly */
+  }
+
+  /* Ensure images do not shrink */
+  .scraped-product-table img {
+    max-width: 100px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+
+  .tabs {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .tabs button {
+    width: auto;
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  .chart-tabs {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .chart-tabs button {
+    padding: 12px 12px;
+    font-size: 12px;
+  }
+
+  .chart {
+    width: 100%;
+    padding: 0px;
+  }
+  .chart-content {
+    padding: 0px;
+  }
+
+  .chart-description {
+    font-size: 12px;
+    line-height: 0.7cm;
+    width: 100%;
+    padding: 10px;
+  }
+
+  .charts-container {
+    padding: 5px;
+  }
 }
 
 
-
-/* Mobile Friendly Adjustments */
-@media (max-width: 768px) {
-  /* Table Container with Horizontal Scroll */
-  .table-container {
-    width:100%;
-    overflow-x: auto; /* Allow horizontal scrolling */
-    -webkit-overflow-scrolling: touch; /* Smooth scrolling on mobile */
+@media screen and (max-width: 768px) {
+  .package-size-table-wrapper {
+    width: 100%;
+    overflow-x: auto; /* Enables horizontal scrolling */
+    display: block;
   }
 
-
-  /* Ensure table has fixed width but can scroll horizontally */
-  .scraped-product-table, .package-size-table {
-    width:100%;
+  .package-size-table {
+    width: max-content; /* Ensures the table takes only required width */
+    min-width: 600px; /* Prevents excessive shrinking */
+    border-collapse: collapse;
+    white-space: nowrap; /* Prevents text wrapping inside cells */
   }
 
-  /* Adjust padding for smaller devices */
-  .scraped-product-table td, .scraped-product-table th {
-    padding: 10px 8px; /* Reduced padding for mobile screens */
-  }
-
-  /* Optional: Adjust header font size for mobile */
-  .scraped-product-table th {
-    font-size: 14px; /* Smaller header font for better mobile readability */
-  }
-
-  /* Optional: Adjust text size for each column */
-  .scraped-product-table td {
-    font-size: 15px; /* Adjust text size for better mobile readability */
-  }
-
-  /* Keep hover effect for mobile */
-  .scraped-product-table tr:hover {
-    background-color: #16404d; /* Soft dark blue on hover */
-  }
-
-  .scraped-product-table tr:hover td,
-  .scraped-product-table tr:hover th {
-    color: white !important;
-    font-weight: bold;
-  }
 }

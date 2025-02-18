@@ -5,7 +5,7 @@ const PincodeSelector = ({ onSelectPincode }) => {
   const [pincodes, setPincodes] = useState([]);
 
   useEffect(() => {
-    axios.get("https://34.59.86.54/pincodes") 
+    axios.get("https://backend.snapprice.in/pincodes") 
       .then(response => setPincodes(response.data))
       .catch(error => console.error("Error fetching pincodes:", error));
   }, []);
