@@ -679,7 +679,7 @@ select:focus {
 
   /* Ensure images do not shrink */
   .scraped-product-table img {
-    max-width: 100px;
+    max-width: 50px;
     height: auto;
     object-fit: cover;
     border-radius: 5px;
